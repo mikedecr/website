@@ -24,6 +24,10 @@ mkd = "mkd.main:app"
 [mkd.hard_links.hugo]
 themes = "submodules/themes"
 
+# no render quarto
+[mkd.hard_links.hugo.content.blog]
+just-enough-conda = "submodules/blog-monorepo/just-enough-conda"
+
 [mkd.links.qmd.blog]
 # multi-env-blog = "submodules/blog-monorepo/multi-env-blog"
 causal-bayes-3-pillars = "submodules/blog-monorepo/causal-bayes-3-pillars"
@@ -31,6 +35,5 @@ scrape-memoize-scum-data = "submodules/blog-monorepo/scrape-memoize-scum-data"
 nonflat-priors = "submodules/blog-monorepo/nonflat-priors"
 usable-research-repos = "submodules/blog-monorepo/usable-research-repos"
 median-voter = "submodules/blog-monorepo/plain-language-median-voter"
-just-enough-conda = "submodules/blog-monorepo/just-enough-conda"
 sugar-free-dict-union = "submodules/blog-monorepo/sugar-free-dict-union"
 mandelbrot-recursive = "submodules/blog-monorepo/mandelbrot-recursive"
