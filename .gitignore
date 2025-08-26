@@ -7,6 +7,9 @@ build/*
 # hugo
 hugo/public
 hugo/.hugo_build.lock
+hugo/content/**/*.qmd
+hugo/content/**/*.lock
+hugo/content/**/*.toml
 
 # --- quarto build ---
 qmd/.quarto/
