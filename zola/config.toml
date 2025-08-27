@@ -1,0 +1,12 @@
+base_url = "https://mikedecr.computer"
+title = "mikedecr . computer"
+compile_sass = true
+build_search_index = true
+theme = "zola-hook"
+
+[markdown]
+highlight_code = true
+highlight_theme = "nord"
+
+[extra]
+# Put all your custom variables here

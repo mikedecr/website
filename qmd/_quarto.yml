@@ -1,6 +1,6 @@
 project:
   type: hugo
-  output-dir: ../hugo/content
+  output-dir: ../zola/content
   render:
     - "*.qmd"
     - ".md"

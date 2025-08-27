@@ -25,7 +25,7 @@ mkd = "mkd.main:app"
 themes = "submodules/themes"
 
 # no render quarto
-[mkd.hard_links.hugo.content.blog]
+[mkd.hard_links.zola.content.blog]
 just-enough-conda = "submodules/blog-monorepo/just-enough-conda"
 
 [mkd.links.qmd.blog]
