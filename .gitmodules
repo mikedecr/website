@@ -4,3 +4,6 @@
 [submodule "submodules/blog-monorepo"]
 	path = submodules/blog-monorepo
 	url = git@github.com:mikedecr/blog-monorepo.git
+[submodule "zola/themes/zola-hook"]
+	path = zola/themes/zola-hook
+	url = https://github.com/InputUsername/zola-hook
