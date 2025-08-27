@@ -5,7 +5,7 @@ theme = "zola-hook"
 
 [markdown]
 highlight_code = true
-# highlight_theme = ...
+highlight_theme = "nord"
 
 [extra]
 # Put all your custom variables here
