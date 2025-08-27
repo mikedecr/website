@@ -26,3 +26,6 @@ qmd/blog/*
 
 # everything else
 *__pycache__
+zola/content/blog/just-enough-conda/pixi.lock
+zola/content/blog/just-enough-conda/pixi.toml
+zola/content/blog/just-enough-conda/index.qmd
