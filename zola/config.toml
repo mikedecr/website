@@ -1,4 +1,5 @@
 base_url = "https://mikedecr.computer"
+title = "mikedecr . computer"
 compile_sass = true
 build_search_index = true
 theme = "zola-hook"
