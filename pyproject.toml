@@ -27,6 +27,8 @@ themes = "submodules/themes"
 # no render quarto
 [mkd.hard_links.zola.content.blog]
 just-enough-conda = "submodules/blog-monorepo/just-enough-conda"
+lazy-dplyr = "submodules/blog-monorepo/delayplyr"
+# currr = "submodules/blog-monorepo/currr"
 
 [mkd.links.qmd.blog]
 # multi-env-blog = "submodules/blog-monorepo/multi-env-blog"
