@@ -842,6 +842,7 @@ version = "0.1.0"
 source = { editable = "." }
 dependencies = [
     { name = "hugo" },
+    { name = "ipython" },
     { name = "pyyaml" },
     { name = "quarto-cli" },
     { name = "typer" },
@@ -850,6 +851,7 @@ dependencies = [
 [package.metadata]
 requires-dist = [
     { name = "hugo", specifier = "==0.138.0" },
+    { name = "ipython", specifier = ">=8.30.0" },
     { name = "pyyaml", specifier = ">=6.0.2" },
     { name = "quarto-cli", specifier = "==1.7.*" },
     { name = "typer", specifier = ">=0.14.0" },
