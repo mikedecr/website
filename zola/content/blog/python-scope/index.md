@@ -142,8 +142,11 @@ class Bind:
             del self._globals[name]
 ```
 
-and this gets us the result we had before.
-I will turn on `verbose` mode to see the sequence of events.
+We take a snapshot of `globals()` (a dict that holds all global-scope name bindings) before and after we do our work in the context block.
+Any new names that appear in the process must have been created in the context block.
+So we delete those items from `globals()`, and when we exit the context block, we can't use those names to lookup data anymore.
+
+I will turn on `verbose` mode for the next example to see the sequence of events.
 
 ``` python
 with Bind(300, 400, verbose=True) as (A, B):
