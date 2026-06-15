@@ -10,7 +10,7 @@ Site generated with [Zola](https://www.getzola.org/). Blog posts rendered from [
 Requires [pixi](https://pixi.sh/latest/).
 
 ```sh
-git clone git@github.com:mikedecr/site-hugo.git mikedecr-site && cd mikedecr-site
+git clone git@github.com:mikedecr/website.git && cd website
 git submodule update --init --recursive
 pixi install
 pixi run zola --root zola serve --drafts
