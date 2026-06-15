@@ -1,4 +1,5 @@
 # env artifacts
+.venv/
 build/*
 
 # python packaging

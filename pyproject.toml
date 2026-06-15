@@ -1,43 +1,16 @@
 [project]
-name = "mikedecr-website"
-description = "Personal website"
+name = "mkd"
 version = "0.1.0"
-dependencies = [
-    "quarto-cli == 1.7.*",
-    "typer>=0.14.0",
-    "hugo == 0.138.0",
-    "pyyaml>=6.0.2",
-    "ipython>=8.30.0",
-]
+description = "Link blog post .md files into zola content"
 requires-python = ">=3.11"
-# author = "Michael DeCrescenzo"
-# Repository = "https://github.com/mikedecr/site-hugo"
-# Issues = "https://github.com/mikedecr/site-hugo/issues"
+dependencies = [
+    "typer>=0.14.0",
+    "rich",
+]
 
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
 
-[tool.uv]
-package = true
-
-[project.scripts]
-mkd = "mkd.main:app"
-
-# register symlinks
-[mkd.hard_links.hugo]
-themes = "submodules/themes"
-
-# no render quarto
-[mkd.hard_links.zola.content.blog]
-just-enough-conda = "submodules/blog-monorepo/just-enough-conda"
-lazy-dplyr = "submodules/blog-monorepo/delayplyr"
-map-as-reduce = "submodules/blog-monorepo/map-as-reduce"
-# currr = "submodules/blog-monorepo/currr"
-
-[mkd.links.qmd.blog]
-# multi-env-blog = "submodules/blog-monorepo/multi-env-blog"
-causal-bayes-3-pillars = "submodules/blog-monorepo/causal-bayes-3-pillars"
-scrape-memoize-scum-data = "submodules/blog-monorepo/scrape-memoize-scum-data"
-nonflat-priors = "submodules/blog-monorepo/nonflat-priors"
-usable-research-repos = "submodules/blog-monorepo/usable-research-repos"
-# median-voter = "submodules/blog-monorepo/plain-language-median-voter"
-sugar-free-dict-union = "submodules/blog-monorepo/sugar-free-dict-union"
-mandelbrot-recursive = "submodules/blog-monorepo/mandelbrot-recursive"
+[tool.setuptools.packages.find]
+where = ["src"]

@@ -1,0 +1,17 @@
+[project]
+name = "mikedecr-website"
+version = "0.1.0"
+description = "Personal website"
+channels = ["conda-forge"]
+platforms = ["osx-arm64"]
+
+[tasks]
+link = { cmd = "python -m mkd link" }
+serve = { cmd = "zola --root zola serve --drafts" }
+
+[dependencies]
+python = ">=3.11"
+zola = "==0.22.1"
+
+[pypi-dependencies]
+mkd = { path = ".", editable = true }
