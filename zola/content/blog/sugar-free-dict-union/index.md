@@ -32,9 +32,9 @@ def merge_dicts(dicts: Iterable[dict]) -> dict:
 
 Here's the way it usually goes.
 
--   You learn a bit of functional programming, and it really clicks how functions can express tons (most? all?) of useful programming concepts in a general way.
--   The framework is *so* general that you start applying it places where it shouldn't be applied.
--   Your suffering is now your own fault.
+- You learn a bit of functional programming, and it really clicks how functions can express tons (most? all?) of useful programming concepts in a general way.
+- The framework is *so* general that you start applying it places where it shouldn't be applied.
+- Your suffering is now your own fault.
 
 I am being silly, but I have this irrational beef with Python.
 Python has a lot of trivial syntax sugar for operations that could simply be functions.
