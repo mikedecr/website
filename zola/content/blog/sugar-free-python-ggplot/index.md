@@ -23,7 +23,7 @@ WHEREAS the Python plotting ecosystem is dominated by imperative, stateful APIs 
 
 WHEREAS Python packages like `seaborn`, `plotnine`, and `lets_plot` have aspired to reimplement the "grammar of graphics" that forms the design basis of `ggplot2` code,
 
-I will assert that copying the exact *syntax* of `ggplot2` in Python not an important thing to do and causes headaches for users.
+I will assert that copying the exact *syntax* of `ggplot2` in Python is not an important thing to do and causes headaches for users.
 These packages have done great work to bring the grammar of graphics to Python.
 Python users can reap these benefits just fine while deviating from the exact syntax.
 
@@ -70,10 +70,10 @@ We will use `plotnine` as our `ggplot2` port in Python.
 import plotnine as pn
 ```
 
-The addition of expressions `a + b + ... + z` is painful in Python because Python has a different set of rules surrounding significant whitespace.
-In R, if one line of code doesn't terminate an expression, the interpreter will continue interpreting future lines until the statement ends or raises.
+The addition of expressions `a + b + ... + z` is painful in Python because Python has a different set of rules for significant whitespace.
+In R, if one line of code doesn't terminate an expression, the interpreter will continue interpreting future lines until the statement ends or errors.
 In Python, a single line of code must terminate the expression (unless other steps are taken).
-For example, our example plot fails if it is written like typical R code, because the lines ending with `+` are incomplete and raise a syntax error.
+For example, this plot fails if it is written like typical R code, because the lines ending with `+` are incomplete and raise a syntax error.
 
 ``` python
 pn.ggplot(data = r.iris) +
@@ -148,11 +148,11 @@ To play devil's advocate, here is some perfectly valid but horrendous R code.
 
 So you can see that R isn't some paragon of syntactic hygiene by any means.
 
-## Functional thinking, not syntax
+## Functions, not syntax
 
 My argument here is mainly that the `+` operation is truly irrelevant to the broader project of porting `ggplot2` ideas into Python.
 The syntax that works in R does not work in Python without workarounds.
-So what value is it to port to Python, really?[^4]
+So what value is there in porting the exact syntax to Python, really?[^4]
 Watch as we make syntax a non-issue while keeping the important grammar components consistent.
 
 We will do it by thinking functionally.
@@ -207,7 +207,7 @@ Code will write and read better if it's not fighting against the language you ar
 
 Just to hammer the broader "functions, not syntax" argument here, we can implement this same interface in R too.
 The `sum` function won't work as our implementation layer without extra OOP legwork.
-But that's okay, we can use `Reduce` because we know that `(sum x)` is functionally equivalent to `(reduce + x)`.
+But that's okay; we can use `Reduce` because we know that `(sum x)` is functionally equivalent to `(reduce + x)`.
 
 ``` r
 fnplot = function(data, ...) {
@@ -234,7 +234,7 @@ I am appealing to some sense in which function calls are universal syntax.
 Whether it's a C-like language with `func(a, b)`, a Lisp with `(func a b)`, or a meta-language with `func a b`, these are all the same.
 
 People joke that Lisps are languages that "contain no syntax".
-This is not entirely true, but I take the point: I have no idea if any Lisps implement the grammar of graphics, but if any did, we already know how to write its `fnplot` implementation.
+This is not entirely true, but I take the point: I have no idea if any Lisps implement the grammar of graphics, but if any did, we already know how to write the `fnplot` implementation.
 
 ``` lisp
 (fnplot
@@ -252,7 +252,6 @@ And this is sort of the whole point with these "Sugar free" blog posts: how ofte
     Not coincidentally, the flow of `polars` syntax is greatly influenced by SQL and R (Tidyverse) code where multi-line expressions are natural for reading a chain of related operations.
 
 [^3]: I don't know about you, but `ggplot`-style plotting is one area where it still feels faster to hand-type the code than explain what I want to an LLM agent.
-    Suffice it so that neither language has a monopoly on hygienic syntax or anything.
 
-[^4]: Thea argument is, of course, that familiarity encourages use.
-    But the expressions like `geom_point(size = 2, alpha = 0.5)` are where the familiarity actually pays off, and these packages handle that just fine.
+[^4]: The argument is, of course, that familiarity encourages use.
+    But expressions like `geom_point(size = 2, alpha = 0.5)` are where the familiarity actually pays off, and these packages handle that just fine.
