@@ -130,7 +130,7 @@ histograms +
     scale_x_continuous(breaks = seq(-10, 10, 2))
 ```
 
-<img src="index.markdown_strict_files/figure-markdown_strict/unnamed-chunk-5-1.png" data-fig-align="center" width="768" />
+<img src="index.markdown_strict_files/figure-markdown_strict/transformed-normals-1.png" data-fig-align="center" width="768" />
 
 For Normal random variables, linear transformation have familiar effects.
 Add a constant, the mean increases by the same constant.
@@ -226,7 +226,7 @@ v |>
         remove_grid()
 ```
 
-<img src="index.markdown_strict_files/figure-markdown_strict/unnamed-chunk-7-1.png" data-fig-align="center" width="768" />
+<img src="index.markdown_strict_files/figure-markdown_strict/nonlinear-transformations-1.png" data-fig-align="center" width="768" />
 
 We started with flat priors for $\varepsilon$ and $\pi$, but the implied prior for our quantity of interest is far from flat.
 If I had simply plopped this graphic into the paper and asserted that it was our prior for this quantity, we would have been in trouble over how *opinionated* it appears.
@@ -264,7 +264,7 @@ ps |>
         labs(y = "Freqency", x = "Parameter value")
 ```
 
-<img src="index.markdown_strict_files/figure-markdown_strict/unnamed-chunk-9-1.png" data-fig-align="center" width="768" />
+<img src="index.markdown_strict_files/figure-markdown_strict/flat-logistic-1.png" data-fig-align="center" width="768" />
 
 So a flat prior for a probability implies a very non-flat prior for the logit probability.
 It turns out that the prior on the logit scale is a $\mathrm{Logistic}(0, 1)$ prior, which feels right when you remember that the inverse link function for logistic regression is the standard Logistic distribution function.
@@ -338,7 +338,7 @@ rct |>
         remove_grid()
 ```
 
-<img src="index.markdown_strict_files/figure-markdown_strict/unnamed-chunk-11-1.png" data-fig-align="center" width="768" />
+<img src="index.markdown_strict_files/figure-markdown_strict/triangular-treatment-effect-prior-1.png" data-fig-align="center" width="768" />
 
 So we started with a flat prior on our group means, and we ended up with a non-trivial prior for the treatment effect.
 How did this happen?
