@@ -4,7 +4,6 @@
 "zola/content/blog/map-as-reduce" = "submodules/blog-monorepo/map-as-reduce"
 "zola/content/blog/causal-bayes-3-pillars" = "submodules/blog-monorepo/causal-bayes-3-pillars"
 "zola/content/blog/scrape-memoize-scum-data" = "submodules/blog-monorepo/scrape-memoize-scum-data"
-"zola/content/blog/nonflat-priors" = "submodules/blog-monorepo/nonflat-priors"
 "zola/content/blog/usable-research-repos" = "submodules/blog-monorepo/usable-research-repos"
 "zola/content/blog/sugar-free-dict-union" = "submodules/blog-monorepo/sugar-free-dict-union"
 "zola/content/blog/mandelbrot-recursive" = "submodules/blog-monorepo/mandelbrot-recursive"
@@ -12,3 +11,7 @@
 [links."zola/content/blog/sugar-free-python-ggplot"]
 src = "submodules/blog-monorepo/sugar-free-python-ggplot"
 include = ["index.markdown_strict_files/**/*.png"]
+
+[links."zola/content/blog/nonflat-priors"]
+src = "submodules/blog-monorepo/nonflat-priors"
+include=["index.markdown_strict_files/**/*"]
