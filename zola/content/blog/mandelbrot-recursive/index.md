@@ -85,8 +85,8 @@ and visualize the famous fractal image that the math produces.
 If you have heard of the Mandelbrot set, it was probably because it is used to create a neat fractal image.
 
 <figure>
-<img src="https://web.archive.org/web/20230302155231im_/https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Mandel_zoom_00_mandelbrot_set.jpg/644px-Mandel_zoom_00_mandelbrot_set.jpg" data-fig-aligh="center" alt="The Mandelbrot set fractal, Wikipedia via Archive.org" />
-<figcaption aria-hidden="true">The Mandelbrot set fractal, Wikipedia via Archive.org</figcaption>
+<img src="assets/mandelbrot.jpg" data-fig-aligh="center" alt="The Mandelbrot set fractal, via Wikipedia" />
+<figcaption aria-hidden="true">The Mandelbrot set fractal, via Wikipedia</figcaption>
 </figure>
 
 But the Mandelbrot set is not an image.
@@ -233,7 +233,7 @@ ggplot(d) +
     theme_minimal()
 ```
 
-<img src="index.markdown_strict_files/figure-markdown_strict/unnamed-chunk-8-1.png" width="768" />
+<img src="index.markdown_strict_files/figure-markdown_strict/mandelbrot-plot-1.png" width="768" />
 
 [^1]: A classic programming book.
     You can read it online for free as [HTML](https://mitp-content-server.mit.edu/books/content/sectbyfn/books_pres_0/6515/sicp.zip/full-text/book/book.html) or as a [PDF](https://web.mit.edu/6.001/6.037/sicp.pdf)
