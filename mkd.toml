@@ -2,14 +2,12 @@
 "zola/content/blog/just-enough-conda" = "submodules/blog-monorepo/just-enough-conda"
 "zola/content/blog/lazy-dplyr" = "submodules/blog-monorepo/delayplyr"
 "zola/content/blog/map-as-reduce" = "submodules/blog-monorepo/map-as-reduce"
-"zola/content/blog/scrape-memoize-scum-data" = "submodules/blog-monorepo/scrape-memoize-scum-data"
 "zola/content/blog/usable-research-repos" = "submodules/blog-monorepo/usable-research-repos"
 "zola/content/blog/sugar-free-dict-union" = "submodules/blog-monorepo/sugar-free-dict-union"
 
-
 [links."zola/content/blog/causal-bayes-3-pillars"]
 src = "submodules/blog-monorepo/causal-bayes-3-pillars"
-include = ["index.md", "sensitivity.png"]
+include = ["sensitivity.png"]
 
 [links."zola/content/blog/sugar-free-python-ggplot"]
 src = "submodules/blog-monorepo/sugar-free-python-ggplot"
