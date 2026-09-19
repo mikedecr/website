@@ -1,4 +1,4 @@
-[project]
+[workspace]
 name = "mikedecr-website"
 version = "0.1.0"
 description = "Personal website"
@@ -6,9 +6,9 @@ channels = ["conda-forge"]
 platforms = ["osx-arm64"]
 
 [tasks]
-link = { cmd = "python -m mkd link" }
+link = {cmd = "python -m mkd link"}
 build = { cmd = "zola --root zola build", depends-on = ["link"] }
-serve = { cmd = "zola --root zola serve --drafts", depends-on = ["link"] }
+serve = {cmd = "zola --root zola serve --fast --drafts", depends-on = ["build", "link"]}
 
 [dependencies]
 python = ">=3.11"
